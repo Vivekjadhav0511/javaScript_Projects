@@ -1,0 +1,55 @@
+
+body{
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main{
+    height: 90%;
+    width: 70vw;
+    background-color: rgb(136, 179, 186);
+    text-align: center;
+}
+
+h1{
+    text-decoration: underline;
+    font-weight:900;
+    text-shadow: 1px 10px 30px
+}
+
+#data div{
+    font-weight: 700;
+    font-size: 19px;
+    padding: 15px;
+    
+}
+
+#data #result{
+    font-size:17px;
+}
+
+#data input{
+    padding: 8px 25px;
+    border-radius: 5px;
+}
+
+#data button{
+    margin-top: 20px;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.bmiGuide{
+    font-weight:600;
+    margin: 30px
+}
+
+.bmiGuide h2{
+  text-decoration:underline;
+}
