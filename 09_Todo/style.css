@@ -1,0 +1,108 @@
+
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg , #153677 ,#4e085f);
+    /* padding: 10px ; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todoApp{
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    /* margin: 100px; */
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    
+}
+
+.todoApp h2{
+    color: #062a64;
+    margin-bottom: 22px;
+    font-size: 28px;
+    text-decoration: underline;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(180, 174, 174);
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+
+}
+
+input {
+    flex:1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+ul li{
+    list-style: none;
+    font-size: 18px;
+    padding: 12px 10px ;
+    user-select: none;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-weight: 500;
+    word-wrap: break-word;
+    
+    
+}
+
+ul li::before{
+  content: '🔵';
+  margin-right: 5px;
+  text-decoration: none;
+}
+
+ul li.checked{
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    content:"🔴" ;
+}
+
+ul li span{
+    position: absolute;
+    margin-left: 300px;
+    margin-top: -5px;
+     text-align: center;
+     width: 40px;
+     height: 35px;
+     padding: 5px;
+     border-radius: 50%;
+     
+}
+
+ul li span:hover{
+    background-color: rgb(186, 182, 182);
+} 
