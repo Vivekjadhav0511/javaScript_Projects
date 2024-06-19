@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
-    
+
 </head>
 
 <body>
@@ -14,15 +14,15 @@
     <section class="contact">
         <h2>Contact Me !</h2>
 
-        <form action="#">
+        <form action="#"  creat>
             <div class="inputBox">
 
                 <div class="input-feild field">
-                    <input type="text" id="fullName" class="Input-border"  class="item" placeholder="Full Name">
+                    <input type="text" id="fullName" class="Input-border" class="item" placeholder="Full Name">
                     <div class="erroe_text"> Full Name Can't Be Blank</div>
                 </div>
                 <div class="input-feild field">
-                    <input type="text" id="emailAddress" class="Input-border " class="item"  placeholder="Email Address">
+                    <input type="text" id="emailAddress" class="Input-border " class="item" placeholder="Email Address">
                     <div class="erroe_text emailError">Email Address Can't Be Blank</div>
                 </div>
 
@@ -30,18 +30,18 @@
             <div class="inputBox">
 
                 <div class="input-feild field">
-                    <input type="text" id="phoneNumber" class="Input-border"  class="item" placeholder="Phone Number">
+                    <input type="text" id="phoneNumber" class="Input-border" class="item" placeholder="Phone Number">
                     <div class="erroe_text">Enter a valid Phone Number</div>
                 </div>
                 <div class="input-feild field">
-                    <input type="text" id="Subject" class="Input-border" class="item"  placeholder="Subject">
+                    <input type="text" id="Subject" class="Input-border" class="item" placeholder="Subject">
                     <div class="erroe_text">Please Enter a Subject</div>
                 </div>
 
             </div>
             <div class="inputMessage field">
-                <textarea name="" id="yourMessage" class="Input-border" class="item"  placeholder="Your Message" rows="10" cols="54"
-                    autocomplete="off"> Your Message </textarea>
+                <textarea name="" id="yourMessage" class="Input-border" class="item" placeholder="Your Message"
+                    rows="10" cols="54" autocomplete="off"> Your Message </textarea>
                 <div class="erroe_text">Message Can't Be Blank</div>
 
             </div>
@@ -61,7 +61,16 @@
         <input type="text">
     </div> -->
 
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "mlpa446AshdIlcdhY",
+            });
+        })();
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./script.js"></script>
 </body>

@@ -8,25 +8,32 @@ const yourMessage = document.getElementById('yourMessage')
 
 function sendEmail() {
 
-    const bodyMessage = `
-    Full Name :- ${fullName.value} <br> 
-    Email :- ${emailAddress.value} <br>
-    Phone Number:- ${phoneNumber.value} <br>
-    Message :- ${yourMessage.value}
-    `
+   
 
-    Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "projecttestingdevui@gmail.com",
-        Password : "7C70112E88A74C835C70234B9651EC99F8A3",
-        To : 'projecttestingdevui@gmail.com',
-        From : "projecttestingdevui@gmail.com",
-        Subject : Subject.value,
-        Body : bodyMessage
+
+    // var templateParams = {
+    //       Name :- fullName.value,
+    //       Number:- phoneNumber.value,
+    //       Subjects :- Subject.value,
+    //       Message :- yourMessage.value
+    //   };
+
+    emailjs.send('service_6h0gvxa', 'template_1j77ddx', {
+        message: yourMessage.value,
+        subject: Subject.value,
+        replayto: "vivekjadhao555@gmail.com",
+        From: emailAddress.value,
     }).then(
-      message => alert(message)
+        message => {
+            if (message.text == "OK") {
+                Swal.fire({
+                    title: " Success !",
+                    text: "Message Sent Successfully ",
+                    icon: "success"
+                });
+            }
+        }
     );
-    
 }
 
 function checkInput() {
@@ -54,7 +61,7 @@ function checkInput() {
                 item.classList.add('error')
                 item.parentElement.classList.add('error')
             }
-             
+
         })
 
 
@@ -88,11 +95,11 @@ function checkEmail() {
 form.addEventListener('submit', function (e) {
     e.preventDefault()
     checkInput()
-    if (!fullName.classList.contains('error') && 
-    !emailAddress.classList.contains('error') && 
-    !phoneNumber.classList.contains('error') && 
-    !Subject.classList.contains('error') && 
-    !yourMessage.classList.contains('error')  ) {
+    if (!fullName.classList.contains('error') &&
+        !emailAddress.classList.contains('error') &&
+        !phoneNumber.classList.contains('error') &&
+        !Subject.classList.contains('error') &&
+        !yourMessage.classList.contains('error')) {
 
         sendEmail()
 
@@ -101,6 +108,6 @@ form.addEventListener('submit', function (e) {
 
         form.reset()
         return false
-        
+
     }
 })
