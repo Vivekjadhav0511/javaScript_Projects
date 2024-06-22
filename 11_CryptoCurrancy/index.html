@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <nav>
+            <img class="logo" src="Images/logo.png" alt="logo">
+            <ul>
+                <li><a href="#">Market</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+
+            <!-- <a href="#" class="btn">En</a> -->
+
+            <select name="currancy" id="currancy">
+                <option selected id="" value="Choose Currancy">Choose Currancy </option>
+                <option class="options"  id="INR" value="INR">INR </option>
+                <option  class="options"  id="USD" value="USD"> USD</option>
+                <option  class="options" id="EUR" value="EUR">EUR</option>
+              </select>
+        </nav>
+        <div class="contenct">
+            <h1>BUY & <br> SELL <span>Crypto</span></h1>
+            <p> World's biggest cryptocurrancy exchange avaliable on web as well <br> as mobile phone </p>
+            <a href="#" class="btn">EXPLORE MORE</a>
+        </div>
+
+         <div class="coin-list">
+            <div class="coin">
+                <img src="./Images/bitcoin.png" alt="">
+                <div>
+                    <h3><span class="currancySign"></span> <span id="bitcoinValue"></span> </h3>
+                    <p>Bitcoin</p>
+                </div>
+            </div>
+            <div class="coin">
+                <img src="./Images/ethereum.png" alt="">
+                <div>
+                    <h3><span class="currancySign"></span> <span id="EthereumcoinValue"></span> </h3>
+                    <p>Ethereum</p>
+                </div>
+            </div>
+            <div class="coin">
+                <img src="./Images/dogecoin.png" alt="">
+                <div>
+                    <h3> <span class="currancySign"></span> <span id="DogecoinValue"></span> </h3>
+                    <p>Dogecoin</p>
+                </div>
+            </div>
+         </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
